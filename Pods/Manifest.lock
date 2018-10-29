@@ -1,0 +1,52 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Kingfisher (4.8.1)
+  - MarqueeLabel/Swift (3.1.6)
+  - ObjectMapper (3.3.0)
+  - Spring (1.0.6)
+  - SwiftGen (5.3.0)
+  - SwiftyJSON (4.1.0)
+  - UIImageColors (2.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - MarqueeLabel/Swift
+  - ObjectMapper
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - SwiftGen (~> 5.3.0)
+  - SwiftyJSON
+  - UIImageColors
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - MarqueeLabel
+    - ObjectMapper
+    - SwiftGen
+    - SwiftyJSON
+    - UIImageColors
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: fafd0b2e8d4d46405bd86fa7ba84bb7f73a20b13
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  MarqueeLabel: 0c41f08ef5773e29c0f71064a8fa788a2fd8b365
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  UIImageColors: c83669aff7ceb55a3b3f2c398f3b5c14632a267b
+
+PODFILE CHECKSUM: b6d1dd93b029b6f40356e4339bc1a016c7c2d21d
+
+COCOAPODS: 1.5.3
