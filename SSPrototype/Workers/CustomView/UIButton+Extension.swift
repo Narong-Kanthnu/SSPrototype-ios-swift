@@ -11,7 +11,7 @@ import UIKit
 
 extension UIButton {
     
-    func shakes() {
+    func shakesAnimation() {
         
         let topImage = UIImage(asset: Asset.Button.icShakesButtonTop)
         let pressImage = UIImage(asset: Asset.Button.icShakesButtonPress)
@@ -19,7 +19,7 @@ extension UIButton {
         let fromPoint = CGPoint(x: center.x, y: center.y)
         let fronValue = NSValue(cgPoint: fromPoint)
         
-        let toPoint = CGPoint(x: center.x + 5, y: center.y + 5)
+        let toPoint = CGPoint(x: center.x + 4, y: center.y + 4)
         let toValue = NSValue(cgPoint: toPoint)
         
         let animation = CABasicAnimation(keyPath: "position")

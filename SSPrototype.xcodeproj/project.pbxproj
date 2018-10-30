@@ -10,6 +10,7 @@
 		9B03CACB217DAFDD007BABA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B03CACA217DAFDD007BABA3 /* AppDelegate.swift */; };
 		9B03CAD0217DAFDD007BABA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B03CACE217DAFDD007BABA3 /* Main.storyboard */; };
 		9B03CAD5217DAFDF007BABA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B03CAD3217DAFDF007BABA3 /* LaunchScreen.storyboard */; };
+		9B25C3102187F9E300121B35 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25C30F2187F9E300121B35 /* UIView+Extension.swift */; };
 		9B750C3A2185C47900C61A52 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B750C392185C47900C61A52 /* UIButton+Extension.swift */; };
 		9B8BB0EB2186A46000860CBB /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BB0EA2186A46000860CBB /* UIImage+Extension.swift */; };
 		9B8BB0F02187068800860CBB /* CachingPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BB0EF2187068800860CBB /* CachingPlayerItem.swift */; };
@@ -24,7 +25,6 @@
 		9B97DD05217EC6F100DB1002 /* VideoFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B97DD03217EC6F100DB1002 /* VideoFeedCell.swift */; };
 		9B97DD0B217ED06900DB1002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B97DD0A217ED06900DB1002 /* Assets.xcassets */; };
 		9B97DD0E217ED4B500DB1002 /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B97DD0D217ED4B500DB1002 /* videos.json */; };
-		9B97DD11217EDB2200DB1002 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B97DD10217EDB2200DB1002 /* GradientView.swift */; };
 		9B97DD13217F6E6200DB1002 /* VideoFeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B97DD12217F6E6200DB1002 /* VideoFeeds.swift */; };
 		9B97DD192182FFC900DB1002 /* VideoFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B97DD172182FFC900DB1002 /* VideoFeedCell.xib */; };
 		C4620790D815A89B0CE9EF44 /* Pods_SSPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A19FD39F301CEF557A4D1E /* Pods_SSPrototype.framework */; };
@@ -38,6 +38,7 @@
 		9B03CACF217DAFDD007BABA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B03CAD4217DAFDF007BABA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B03CAD6217DAFDF007BABA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B25C30F2187F9E300121B35 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9B750C392185C47900C61A52 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		9B8BB0EA2186A46000860CBB /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9B8BB0EF2187068800860CBB /* CachingPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachingPlayerItem.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		9B97DD03217EC6F100DB1002 /* VideoFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedCell.swift; sourceTree = "<group>"; };
 		9B97DD0A217ED06900DB1002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B97DD0D217ED4B500DB1002 /* videos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videos.json; sourceTree = "<group>"; };
-		9B97DD10217EDB2200DB1002 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		9B97DD12217F6E6200DB1002 /* VideoFeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeeds.swift; sourceTree = "<group>"; };
 		9B97DD172182FFC900DB1002 /* VideoFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoFeedCell.xib; sourceTree = "<group>"; };
 		C1B56ECCC7643971F53BEBC9 /* Pods-SSPrototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSPrototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSPrototype/Pods-SSPrototype.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,9 +206,9 @@
 		9B97DD0F217EDAF800DB1002 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				9B97DD10217EDB2200DB1002 /* GradientView.swift */,
 				9B750C392185C47900C61A52 /* UIButton+Extension.swift */,
 				9B8BB0EA2186A46000860CBB /* UIImage+Extension.swift */,
+				9B25C30F2187F9E300121B35 /* UIView+Extension.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -376,9 +376,9 @@
 			files = (
 				9B97DCF6217DC84C00DB1002 /* VideoFeedRouter.swift in Sources */,
 				9B8BB0EB2186A46000860CBB /* UIImage+Extension.swift in Sources */,
+				9B25C3102187F9E300121B35 /* UIView+Extension.swift in Sources */,
 				9B97DCF4217DC84C00DB1002 /* VideoFeedPresenter.swift in Sources */,
 				9B750C3A2185C47900C61A52 /* UIButton+Extension.swift in Sources */,
-				9B97DD11217EDB2200DB1002 /* GradientView.swift in Sources */,
 				9B97DCF9217DC84C00DB1002 /* VideoFeedInteractor.swift in Sources */,
 				9B97DD05217EC6F100DB1002 /* VideoFeedCell.swift in Sources */,
 				9B97DD13217F6E6200DB1002 /* VideoFeeds.swift in Sources */,

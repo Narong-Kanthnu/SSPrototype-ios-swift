@@ -41,6 +41,7 @@ class VideoFeedCell: UICollectionViewCell {
         self.setVideoDescriptionMarqueeLebel()
         self.setPlayButtonBackground()
         self.setGestureRecognizer()
+        self.headerView.setGradientBackground(startColor: UIColor.darkGray, endColor: UIColor.clear, angle: 270)
     }
     
     override func prepareForReuse() {
@@ -51,7 +52,7 @@ class VideoFeedCell: UICollectionViewCell {
     }
     
     @IBAction func playButtonClicked(sender: UIButton) {
-        sender.shakes()
+        sender.shakesAnimation()
         self.player.timeControlStatus == .playing ? self.player.pause() : self.player.play()
     }
     
@@ -95,10 +96,16 @@ class VideoFeedCell: UICollectionViewCell {
     
     private func setPlayButtonBackground() {
         let bgImage = UIImage(asset: Asset.Button.icShakesButtonBg).resizedImage(newSize: CGSize(width: self.playButton.bounds.width, height: self.playButton.bounds.height))
-        let playButtonBgView = UIView(frame: CGRect(x: self.playButton.frame.origin.x + 5, y: self.playButton.frame.origin.y + 5, width: self.playButton.bounds.width, height: self.playButton.bounds.height))
+
+        let playButtonBgView = UIView()
         playButtonBgView.backgroundColor = UIColor(patternImage: bgImage)
-        self.footerView.layer.addSublayer(playButtonBgView.layer)
-        self.footerView.layer.addSublayer(self.playButton.layer)
+        playButtonBgView.translatesAutoresizingMaskIntoConstraints = false
+        self.footerView.addSubview(playButtonBgView)
+        self.footerView.addSubview(self.playButton)
+        playButtonBgView.widthAnchor.constraint(equalToConstant: self.playButton.bounds.width).isActive = true
+        playButtonBgView.heightAnchor.constraint(equalToConstant: self.playButton.bounds.height).isActive = true
+        playButtonBgView.trailingAnchor.constraint(equalTo: self.playButton.layoutMarginsGuide.trailingAnchor, constant: 12).isActive = true
+        playButtonBgView.bottomAnchor.constraint(equalTo: self.playButton.layoutMarginsGuide.bottomAnchor, constant: 12).isActive = true
     }
 
     private func setVideoViewFromUrl(videoUrl: URL) {
@@ -108,7 +115,7 @@ class VideoFeedCell: UICollectionViewCell {
         self.player.automaticallyWaitsToMinimizeStalling = false
         self.playerLayer = AVPlayerLayer(player: self.player)
         self.playerLayer.videoGravity = .resizeAspectFill
-        self.playerLayer.frame = videoView.bounds
+        self.playerLayer.frame = self.bounds
     }
     
     private func setVideoViewLayer() {
